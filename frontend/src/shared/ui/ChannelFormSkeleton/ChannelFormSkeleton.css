@@ -1,0 +1,14 @@
+/* ChannelFormSkeleton — заглушка формы канала при загрузке. */
+.channel-form-skeleton__photo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+}
+
+.channel-form-skeleton__field {
+  width: 100%;
+  height: 56px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+}

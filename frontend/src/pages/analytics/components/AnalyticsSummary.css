@@ -1,0 +1,154 @@
+/* AnalyticsSummary — блок сводки: сумма, подпись, сравнение с прошлым периодом, настройки. */
+.analytics-summary {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 18px 14px 20px;
+  border-radius: 16px;
+  background: var(--background-card);
+}
+
+.analytics-summary__total-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.analytics-summary__total {
+  min-width: 0;
+  flex: 1;
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+.analytics-summary__settings {
+  position: relative;
+  flex: 0 0 auto;
+  margin-top: 3px;
+}
+
+.analytics-summary__settings-trigger {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: var(--background-soft);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.analytics-summary__settings-trigger:hover {
+  color: var(--text-primary);
+}
+
+.analytics-summary__settings-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.analytics-summary__settings-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 6;
+  display: flex;
+  width: min(280px, calc(100vw - 40px));
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-default);
+  border-radius: 14px;
+  background: var(--background-card);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 8%);
+}
+
+.analytics-summary__settings-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.analytics-summary__settings-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.analytics-summary__settings-checkbox {
+  display: flex;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  border: 1.5px solid var(--icon-default);
+  border-radius: 6px;
+  background: transparent;
+}
+
+.analytics-summary__settings-option input:checked + .analytics-summary__settings-checkbox {
+  border-color: var(--primary-blue);
+  background: var(--primary-blue);
+}
+
+.analytics-summary__settings-option
+  input:checked
+  + .analytics-summary__settings-checkbox::after {
+  width: 10px;
+  height: 6px;
+  border-bottom: 2px solid var(--background-card);
+  border-left: 2px solid var(--background-card);
+  content: "";
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.analytics-summary__settings-label {
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.analytics-summary__subtitle {
+  margin: 4px 0 0;
+  color: var(--text-secondary);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.analytics-summary__comparison {
+  margin: 6px 0 0;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.analytics-summary__comparison-value {
+  font-weight: 500;
+}
+
+.analytics-summary__comparison-value--up {
+  color: #22c55e;
+}
+
+.analytics-summary__comparison-value--down {
+  color: var(--error);
+}
+
+.analytics-summary__comparison-value--flat {
+  color: var(--text-secondary);
+}
+
+.analytics-summary__comparison-meta {
+  color: var(--text-secondary);
+  font-weight: 400;
+}

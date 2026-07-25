@@ -1,0 +1,64 @@
+/* Toast — всплывающее уведомление внизу экрана (ошибки, успех, подсказки). */
+.toast {
+  position: fixed;
+  right: max(20px, calc((100vw - 430px) / 2 + 20px));
+  bottom: 158px;
+  left: max(20px, calc((100vw - 430px) / 2 + 20px));
+  z-index: 30;
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 13px 16px;
+  border-radius: 14px;
+  color: var(--background-card);
+  background: rgb(0 0 0 / 82%);
+  text-align: center;
+  font-size: 15px;
+  line-height: 20px;
+  animation: toast-in 0.18s ease-out;
+  will-change: opacity, transform;
+}
+
+.toast--low {
+  bottom: 112px;
+}
+
+.toast--muted {
+  color: var(--text-secondary);
+  background: var(--background-soft);
+  border: 0.906px solid var(--background-base);
+  font-size: 14px;
+  line-height: 18px;
+  padding: 11px 14px;
+}
+
+.toast--elevated {
+  z-index: 50;
+}
+
+.toast--closing {
+  animation: toast-out 0.18s ease-in forwards;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toast-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}

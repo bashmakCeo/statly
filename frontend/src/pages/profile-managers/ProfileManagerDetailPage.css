@@ -1,0 +1,86 @@
+/* ProfileManagerDetailPage — редактирование каналов менеджера. */
+.profile-manager-detail-page.page-card.page-card--content {
+  gap: 16px;
+}
+
+.profile-manager-detail-page__profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--background-soft);
+}
+
+.profile-manager-detail-page__avatar {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-manager-detail-page__avatar--fallback {
+  display: grid;
+  place-items: center;
+  color: var(--background-card);
+  background: var(--primary-blue);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.profile-manager-detail-page__profile-content {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile-manager-detail-page__name {
+  color: var(--text-primary);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.profile-manager-detail-page__username {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: normal;
+}
+
+.profile-manager-detail-page__channels {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-manager-detail-page__channels-label {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: normal;
+}
+
+.profile-manager-detail-page__delete {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 16px;
+  border: 0;
+  border-radius: 12px;
+  color: var(--error);
+  background: var(--background-soft);
+  font: inherit;
+  font-size: 17px;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.profile-manager-detail-page__delete:disabled {
+  cursor: default;
+  opacity: 0.7;
+}

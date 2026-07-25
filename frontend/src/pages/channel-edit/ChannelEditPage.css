@@ -1,0 +1,36 @@
+/* ChannelEditPage — редактирование канала и кнопка удаления. */
+.channel-edit-page__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.channel-edit-page__delete {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 16px;
+  border: 0;
+  border-radius: 12px;
+  color: var(--error);
+  background: var(--background-soft);
+  font: inherit;
+  font-size: 17px;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.channel-edit-page__delete:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+@media (max-width: 360px) {
+  .channel-edit-page__content {
+    gap: 18px;
+  }
+}

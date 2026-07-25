@@ -1,0 +1,12 @@
+aiogram
+asyncpg
+fastapi
+httpx
+greenlet
+pillow
+pillow-heif
+python-dotenv
+python-multipart
+sqlalchemy
+uvicorn[standard]
+APScheduler

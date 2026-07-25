@@ -1,0 +1,377 @@
+/* PlacementCreatePage — форма создания размещения: поля, цены по каналам, отправка. */
+.placement-create-page__selected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 18px;
+  text-align: center;
+}
+
+.placement-create-page__avatars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  margin-bottom: 12px;
+  padding-left: 28px;
+}
+
+.placement-create-page__avatar {
+  margin-left: -28px;
+}
+
+.placement-create-page__selected h1 {
+  max-width: 320px;
+  margin: 0;
+  overflow: hidden;
+  color: var(--text-primary);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 32px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placement-create-page__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.placement-create-page__field {
+  position: relative;
+  display: grid;
+  gap: 10px;
+}
+
+.placement-create-page__field:not(:first-child) .placement-create-page__field-control {
+  margin-top: 8px;
+}
+
+.placement-create-page__field-control {
+  display: flex;
+  width: 100%;
+  min-height: 62px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px 0 16px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background: var(--background-soft);
+}
+
+.placement-create-page__field input {
+  width: 100%;
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  color: var(--text-primary);
+  background: transparent;
+  font: inherit;
+  font-size: 18px;
+  outline: none;
+}
+
+.placement-create-page__field--error .placement-create-page__field-control {
+  border-color: var(--error);
+  background: rgb(243 33 33 / 6%);
+}
+
+.placement-create-page__field-icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.placement-create-page__field-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.placement-create-page__suggestions {
+  position: absolute;
+  z-index: 12;
+  top: 70px;
+  right: 0;
+  left: 0;
+  display: grid;
+  gap: 4px;
+  padding: 6px;
+  border: 1px solid var(--border-default);
+  border-radius: 14px;
+  background: var(--background-card);
+  box-shadow: 0 12px 26px rgb(0 0 0 / 10%);
+}
+
+.placement-create-page__suggestions button {
+  width: 100%;
+  padding: 11px 12px;
+  border: 0;
+  border-radius: 10px;
+  color: var(--text-primary);
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.placement-create-page__suggestions button:hover {
+  background: var(--background-soft);
+}
+
+.placement-create-page__field input::placeholder {
+  color: var(--text-secondary);
+}
+
+.placement-create-page__field > span {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.placement-create-page__required {
+  margin-left: 3px;
+  color: var(--error);
+}
+
+.placement-create-page__price-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: -4px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.placement-create-page__price-summary button,
+.placement-create-page__channel-prices button {
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  color: var(--primary-blue);
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.placement-create-page__channel-prices {
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background: var(--background-soft);
+}
+
+.placement-create-page__channel-prices--error {
+  border-color: var(--error);
+  background: rgb(243 33 33 / 6%);
+}
+
+.placement-create-page__channel-prices-header,
+.placement-create-page__channel-prices-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.placement-create-page__channel-prices-header h2 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.placement-create-page__channel-prices-header p {
+  margin: 3px 0 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.placement-create-page__channel-prices-list {
+  display: grid;
+  gap: 8px;
+}
+
+.placement-create-page__channel-price {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  min-height: 83px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: var(--background-card);
+}
+
+.placement-create-page__channel-price-info {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.placement-create-page__channel-price-info > span:last-child {
+  overflow: hidden;
+  color: var(--text-primary);
+  font-size: 15px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placement-create-page__channel-price input {
+  width: 92px;
+  min-width: 0;
+  flex: 0 0 auto;
+  border: 0;
+  color: var(--text-primary);
+  background: transparent;
+  text-align: right;
+  font: inherit;
+  font-size: 17px;
+  outline: none;
+}
+
+.placement-create-page__channel-price input::placeholder {
+  color: var(--text-secondary);
+}
+
+.placement-create-page__channel-prices-footer {
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.placement-create-page__paid {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.placement-create-page__paid input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.placement-create-page__checkbox {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 6px 4px;
+  border: 1.5px solid var(--icon-default);
+  border-radius: 7px;
+  background: transparent;
+}
+
+.placement-create-page__checkbox img {
+  max-width: 15px;
+  max-height: 12px;
+}
+
+.placement-create-page__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.placement-create-page__submit {
+  display: flex;
+  width: 100%;
+  max-width: 390px;
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  border: 0;
+  border-radius: 12px;
+  color: var(--background-card);
+  background: var(--primary-blue);
+  font: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.placement-create-page__submit:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+
+@media (max-width: 360px) {
+  .placement-create-page__price-summary {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .placement-create-page__channel-prices {
+    gap: 10px;
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .placement-create-page__channel-prices-header {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .placement-create-page__channel-prices-header h2 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .placement-create-page__channel-price {
+    min-height: 83px;
+    gap: 8px;
+    padding: 7px 8px;
+  }
+
+  .placement-create-page__channel-price-info {
+    gap: 8px;
+  }
+
+  .placement-create-page__channel-price-info > span:last-child {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .placement-create-page__channel-price input {
+    width: 64px;
+    font-size: 16px;
+  }
+}

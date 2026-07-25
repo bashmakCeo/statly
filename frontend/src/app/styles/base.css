@@ -1,0 +1,85 @@
+/* Базовые глобальные стили: сброс, шрифт, фон, поведение скролла и tap-highlight. */
+html,
+body {
+  touch-action: pan-x pan-y;
+  overscroll-behavior-y: none;
+  background: var(--background-base);
+}
+
+html {
+  height: 100%;
+}
+
+:root {
+  font-family:
+    "SF Pro Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: var(--text-primary);
+  background: var(--background-base);
+  color-scheme: light only;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  background: var(--background-base);
+}
+
+button {
+  font: inherit;
+  user-select: none;
+}
+
+button,
+input,
+label,
+select,
+textarea,
+a,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+input,
+textarea,
+select {
+  caret-color: var(--text-primary);
+  color: var(--text-primary);
+  color-scheme: light;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-primary);
+  box-shadow: 0 0 0 1000px var(--background-soft) inset;
+  transition: background-color 9999s ease-out 0s;
+}
+
+#root {
+  min-height: 100%;
+  background: var(--background-base);
+}

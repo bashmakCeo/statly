@@ -1,0 +1,23 @@
+/* HomePage — главная: приветствие, счётчик постов, список каналов. */
+.home-page__hero {
+  padding: 28px 20px 18px;
+}
+
+.home-page__title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0 0 18px;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -1.2px;
+}
+
+.home-page__title span {
+  color: var(--primary-blue);
+}
+
+.home-page__content.page-card.page-card--content {
+  padding-bottom: 140px;
+}

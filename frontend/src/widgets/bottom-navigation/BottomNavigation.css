@@ -1,0 +1,52 @@
+/* BottomNavigation — нижняя навигация: главная, аналитика, профиль. */
+.bottom-navigation {
+  position: fixed;
+  right: max(0px, calc((100vw - 430px) / 2));
+  bottom: 0;
+  left: max(0px, calc((100vw - 430px) / 2));
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: min(100%, 430px);
+  margin: 0 auto;
+  padding: 12px 16px 18px;
+  border-top: 1px solid var(--border-default);
+  border-radius: 24px 24px 0 0;
+  background: rgb(255 255 255 / 92%);
+  backdrop-filter: blur(16px);
+}
+
+@media (max-width: 767px) {
+  /* Пока в любом поле активен фокус (открыта клавиатура) — прячем меню,
+     чтобы оно не перекрывало поля над клавиатурой на мобильных (iOS Telegram). */
+  body:has(input:focus, textarea:focus, select:focus, [contenteditable]:focus)
+    .bottom-navigation {
+    display: none;
+  }
+}
+
+.bottom-navigation__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border: 0;
+  color: var(--icon-default);
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.bottom-navigation__item span {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.bottom-navigation__icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.bottom-navigation__item--active {
+  color: var(--primary-blue);
+}

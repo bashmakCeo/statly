@@ -1,0 +1,15 @@
+/* StateMessage — блок состояния загрузки, ошибки или пустого списка. */
+.state-message {
+  margin: 0;
+  padding: 28px 16px;
+  border-radius: 20px;
+  color: var(--text-secondary);
+  background: var(--background-soft);
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.state-message--error {
+  color: var(--error);
+}

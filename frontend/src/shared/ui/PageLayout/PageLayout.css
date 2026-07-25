@@ -1,0 +1,57 @@
+/* PageLayout — каркас страницы: обёртка, карточка контента, кнопки навигации. */
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 430px);
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--background-base);
+}
+
+.page-card {
+  background: var(--background-card);
+}
+
+.page-card--hero {
+  border-radius: 0 0 22px 22px;
+}
+
+.page-card--content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: calc(100vh - 88px);
+  margin-top: 8px;
+  padding: 20px 20px 140px;
+  border-radius: 16px 16px 0 0;
+}
+
+.nav-button {
+  padding: 0;
+  border: 0;
+  color: var(--primary-blue);
+  background: transparent;
+  font-size: 17px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.nav-button--back {
+  color: var(--text-secondary);
+}
+
+.nav-button:disabled {
+  color: var(--icon-default);
+  cursor: default;
+}
+
+.nav-button--spacer {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.nav-button--danger {
+  color: var(--error);
+}

@@ -1,0 +1,42 @@
+/* AnalyticsPage — layout страницы аналитики: сетка фильтров и контент. */
+.analytics-page__filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.analytics-page__content.page-card.page-card--content {
+  flex: 1 1 auto;
+  min-height: calc(100vh - 96px);
+  padding-bottom: 0;
+  background: var(--background-base);
+}
+
+.analytics-page__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 8px;
+  min-height: 0;
+}
+
+.analytics-summary {
+  flex: 0 0 auto;
+}
+
+.analytics-summary,
+.analytics-channels-section {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.analytics-channels-section {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  padding-bottom: 140px;
+  border-radius: 16px 16px 0 0;
+}

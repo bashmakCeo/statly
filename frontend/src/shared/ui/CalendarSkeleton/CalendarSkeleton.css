@@ -1,0 +1,22 @@
+/* CalendarSkeleton — заглушка сетки календаря при загрузке. */
+.calendar-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.calendar-skeleton__header {
+  width: 140px;
+  height: 28px;
+}
+
+.calendar-skeleton__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-skeleton__day {
+  aspect-ratio: 1;
+  border-radius: 12px;
+}

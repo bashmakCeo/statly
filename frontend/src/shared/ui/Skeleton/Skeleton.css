@@ -1,0 +1,22 @@
+/* Skeleton — анимированная заглушка на время загрузки данных. */
+.skeleton {
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    var(--background-soft) 0%,
+    #e8e8e8 50%,
+    var(--background-soft) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}

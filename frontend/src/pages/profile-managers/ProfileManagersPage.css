@@ -1,0 +1,111 @@
+/* ProfileManagersPage — назначение менеджеров на каналы владельца. */
+.profile-managers-page.page-card.page-card--content {
+  gap: 12px;
+}
+
+.profile-managers-page__empty {
+  margin: 24px 0 0;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.profile-managers-page__list {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-managers-page__item {
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border: 0;
+  border-radius: 20px;
+  background: var(--background-soft);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.profile-managers-page__chevron {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  color: var(--icon-default);
+}
+
+.profile-managers-page__avatar {
+  width: 67px;
+  height: 67px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-managers-page__avatar--fallback {
+  display: grid;
+  place-items: center;
+  color: var(--background-card);
+  background: var(--primary-blue);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.profile-managers-page__item-content {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-managers-page__item-name {
+  color: var(--text-primary);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.profile-managers-page__item-username {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: normal;
+}
+
+.profile-managers-page__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: normal;
+}
+
+.profile-managers-page__select,
+.profile-managers-page__input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--background-soft);
+  color: var(--text-primary);
+  font-size: 17px;
+  line-height: normal;
+}
+
+.profile-managers-page__form-error {
+  margin: 0;
+  color: var(--error);
+  font-size: 14px;
+  line-height: 18px;
+}

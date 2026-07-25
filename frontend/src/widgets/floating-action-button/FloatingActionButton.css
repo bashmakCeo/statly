@@ -1,0 +1,90 @@
+/* FloatingActionButton — плавающая кнопка «+» с выпадающим меню действий. */
+.floating-action__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 19;
+  border: 0;
+  background: transparent;
+  cursor: default;
+}
+
+.floating-action {
+  position: fixed;
+  right: max(18px, calc((100vw - 430px) / 2 + 18px));
+  bottom: 112px;
+  z-index: 20;
+  display: grid;
+  justify-items: end;
+  gap: 10px;
+}
+
+.floating-action__menu {
+  display: grid;
+  gap: 5px;
+  animation: floating-action-menu-in 0.22s ease-out;
+  transform-origin: right bottom;
+}
+
+.floating-action__menu-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 178px;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 14px;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left;
+  background: var(--background-card);
+  box-shadow: 0 10px 24px rgb(0 0 0 / 12%);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.floating-action__menu-button:hover {
+  background: var(--background-soft);
+}
+
+.floating-action__menu-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  color: var(--primary-blue);
+}
+
+.floating-action-button {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  place-items: center;
+  border: 0;
+  border-radius: 16px;
+  color: var(--background-card);
+  background: var(--primary-blue);
+  box-shadow: 0 10px 26px rgb(48 109 255 / 30%);
+  cursor: pointer;
+}
+
+.floating-action-button__icon {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.15s ease;
+}
+
+.floating-action-button[aria-expanded="true"] .floating-action-button__icon {
+  transform: rotate(45deg);
+}
+
+@keyframes floating-action-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

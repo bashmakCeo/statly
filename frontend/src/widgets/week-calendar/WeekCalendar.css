@@ -1,0 +1,104 @@
+/* WeekCalendar — горизонтальный календарь на 7 дней с точками размещений. */
+.week-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 42px);
+  justify-content: space-between;
+  gap: 0;
+}
+
+.week-calendar--with-month-button {
+  grid-template-columns: repeat(7, 42px);
+  grid-template-rows: auto 50px;
+  row-gap: 4px;
+}
+
+.week-calendar--with-month-button .week-calendar__day {
+  grid-row: 2;
+}
+
+.week-calendar__day {
+  display: flex;
+  width: 42px;
+  height: 50px;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--background-soft);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.week-calendar__weekday {
+  margin-bottom: 2px;
+  color: var(--icon-default);
+  text-align: center;
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.week-calendar__day strong {
+  color: var(--text-secondary);
+  text-align: center;
+  font-family: inherit;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.week-calendar__today-star {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: var(--error);
+}
+
+.week-calendar__today-star-spacer {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+.week-calendar__day--active {
+  background: var(--primary-blue);
+}
+
+.week-calendar__day--active strong {
+  color: var(--background-card);
+}
+
+.week-calendar__day--active .week-calendar__weekday {
+  color: var(--icon-calendar);
+}
+
+.week-calendar__day--active .week-calendar__today-star-spacer {
+  visibility: hidden;
+}
+
+.week-calendar__month-button {
+  display: grid;
+  grid-row: 1;
+  grid-column: 7;
+  width: 25px;
+  height: 27px;
+  justify-self: center;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.week-calendar__month-button img {
+  width: 25px;
+  height: 27px;
+}

@@ -1,0 +1,63 @@
+/* AnalyticsSkeleton — заглушки сводки и списка каналов на странице аналитики. */
+.analytics-skeleton__total {
+  width: 180px;
+  height: 34px;
+}
+
+.analytics-skeleton__settings {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+}
+
+.analytics-skeleton__subtitle {
+  width: 220px;
+  height: 20px;
+  margin-top: 8px;
+}
+
+.analytics-skeleton__chart {
+  width: 100%;
+  height: 220px;
+  margin-top: 18px;
+  border-radius: 12px;
+}
+
+.analytics-skeleton__channels {
+  padding-top: 12px;
+}
+
+.analytics-skeleton__channel-item {
+  pointer-events: none;
+}
+
+.analytics-skeleton__channel-avatar {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+}
+
+.analytics-skeleton__channel-info {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.analytics-skeleton__channel-title {
+  width: 70%;
+  height: 18px;
+}
+
+.analytics-skeleton__channel-meta {
+  width: 45%;
+  height: 14px;
+}
+
+.analytics-skeleton__channel-price {
+  width: 72px;
+  height: 18px;
+  flex: 0 0 auto;
+}

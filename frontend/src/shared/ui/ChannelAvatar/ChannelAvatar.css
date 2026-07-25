@@ -1,0 +1,34 @@
+/* ChannelAvatar — круглая аватарка канала с фото или инициалами. */
+.channel-avatar {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.channel-avatar--fallback {
+  color: var(--background-card);
+  background: var(--primary-blue);
+  font-weight: 500;
+}
+
+.channel-avatar--sm {
+  width: 67px;
+  height: 67px;
+  font-size: 24px;
+}
+
+.channel-avatar--md {
+  width: 67px;
+  height: 67px;
+  font-size: 24px;
+}
+
+.channel-avatar--lg {
+  width: 104px;
+  height: 104px;
+  border: 1.906px solid var(--border-default, #efeff3);
+  border-radius: 110px;
+  font-size: 30px;
+}

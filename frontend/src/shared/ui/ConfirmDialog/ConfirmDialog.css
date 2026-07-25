@@ -1,0 +1,149 @@
+/* ConfirmDialog — модалка подтверждения опасного действия (удаление канала/размещения). */
+.confirm-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.confirm-dialog__backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgb(239 239 243 / 55%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.confirm-dialog__panel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 300px;
+  height: 168px;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px 16px;
+  border: 0.906px solid var(--background-base);
+  border-radius: 16px;
+  background: var(--background-card);
+  text-align: center;
+  animation: confirm-dialog-in 0.18s ease-out;
+}
+
+.confirm-dialog__panel--wide {
+  width: min(100%, 320px);
+  height: auto;
+  min-height: 168px;
+}
+
+.confirm-dialog__panel h2 {
+  margin: 0 0 6px;
+  color: var(--text-primary);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.confirm-dialog__panel p {
+  margin: 0 0 16px;
+  color: var(--text-secondary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.confirm-dialog__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.confirm-dialog__cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9.063px;
+  padding: 9.969px 28.094px;
+  border: 1px solid var(--background-base);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  background: var(--background-soft);
+  font: inherit;
+  font-size: 17px;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.confirm-dialog__delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9.063px;
+  padding: 9.969px 26.281px;
+  border: 1px solid var(--error);
+  border-radius: 8px;
+  color: var(--background-card);
+  background: var(--error);
+  font: inherit;
+  font-size: 17px;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.confirm-dialog__cancel:disabled,
+.confirm-dialog__delete:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.confirm-dialog--elevated {
+  z-index: 50;
+}
+
+.confirm-dialog__confirm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9.063px;
+  padding: 9.969px 26.281px;
+  border: 0;
+  border-radius: 8px;
+  color: var(--background-card);
+  background: var(--primary-blue);
+  font: inherit;
+  font-size: 17px;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.confirm-dialog__confirm:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+@keyframes confirm-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 360px) {
+  .confirm-dialog__panel {
+    width: min(100%, 300px);
+  }
+}

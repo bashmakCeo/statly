@@ -1,0 +1,13 @@
+/* CSS-переменные дизайн-системы: цвета, фоны, текст, иконки. */
+:root {
+  --error: #f32121;
+  --primary-blue: #306dff;
+  --background-card: #ffffff;
+  --background-soft: #fafafa;
+  --background-base: #efeff3;
+  --border-default: #efeff3;
+  --text-primary: #000000;
+  --text-secondary: #7f7f7f;
+  --icon-default: #b6b6b6;
+  --icon-calendar: #ffffff99;
+}

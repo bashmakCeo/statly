@@ -1,0 +1,244 @@
+/* ChannelCalendarPage — месячный календарь канала с количеством размещений по дням. */
+.channel-calendar-page__top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.channel-calendar-page__nav-card,
+.channel-calendar-page__channel-card {
+  width: 100%;
+  background: var(--background-card);
+}
+
+.channel-calendar-page__nav-card {
+  border-radius: 0 0 16px 16px;
+}
+
+.channel-calendar-page__channel-card {
+  border-radius: 16px;
+}
+
+.channel-calendar-page__nav {
+  display: flex;
+  height: 56px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+}
+
+.channel-calendar-page__year {
+  color: var(--primary-blue);
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.channel-calendar-page__channel-card {
+  display: flex;
+  height: 100px;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+}
+
+.channel-calendar-page__channel-card--with-nav {
+  display: grid;
+  grid-template-columns: 34px auto minmax(0, 1fr) 34px;
+  gap: 8px;
+  padding-inline: 12px;
+}
+
+.channel-calendar-page__channel-arrow {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  color: var(--primary-blue);
+  background: var(--background-soft);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.channel-calendar-page__channel-arrow:disabled {
+  visibility: hidden;
+  cursor: default;
+}
+
+.channel-calendar-page__channel-info {
+  min-width: 0;
+}
+
+.channel-calendar-page__channel-info h1 {
+  margin: 0 0 6px;
+  overflow: hidden;
+  color: var(--text-primary);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.channel-calendar-page__channel-info p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: normal;
+}
+
+.channel-calendar-page__channel-info p span {
+  color: var(--primary-blue);
+}
+
+.channel-calendar-page__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.channel-calendar-page__calendar {
+  display: grid;
+  gap: 12px;
+}
+
+.channel-calendar-page__calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.channel-calendar-page__calendar-header h2 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.channel-calendar-page__calendar-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.channel-calendar-page__calendar-nav button {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  color: var(--primary-blue);
+  background: var(--background-soft);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.channel-calendar-page__weekdays,
+.channel-calendar-page__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 42px);
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.channel-calendar-page__weekdays span {
+  color: var(--icon-default);
+  text-align: center;
+  font-size: 12px;
+  line-height: normal;
+}
+
+.channel-calendar-page__empty {
+  width: 42px;
+  height: 62px;
+}
+
+.channel-calendar-page__day-cell {
+  display: flex;
+  width: 42px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.channel-calendar-page__day {
+  display: flex;
+  width: 42px;
+  height: 50px;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 14px 6px;
+  border-radius: 12px;
+  background: var(--background-soft);
+  color: var(--text-secondary);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.channel-calendar-page__day--selected {
+  background: var(--primary-blue);
+  color: var(--background-card);
+}
+
+.channel-calendar-page__day--selected .channel-calendar-page__today-star-spacer {
+  visibility: hidden;
+}
+
+.channel-calendar-page__dots {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: repeat(3, 4px);
+  gap: 2px;
+  justify-content: center;
+}
+
+.channel-calendar-page__dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--primary-blue);
+}
+
+.channel-calendar-page__today-star {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: var(--error);
+}
+
+.channel-calendar-page__today-star-spacer {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+.channel-calendar-page__dots-spacer {
+  display: block;
+  width: 14px;
+  height: 8px;
+}
+
+@media (max-width: 360px) {
+  .channel-calendar-page__weekdays,
+  .channel-calendar-page__grid {
+    gap: 8px;
+  }
+}

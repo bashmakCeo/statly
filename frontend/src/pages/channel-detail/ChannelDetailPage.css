@@ -1,0 +1,66 @@
+/* ChannelDetailPage — карточка канала: шапка, календарь недели, список размещений. */
+.channel-detail-page__header {
+  display: grid;
+  gap: 18px;
+}
+
+.channel-detail-page__profile {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.channel-detail-page__avatar {
+  border: 0;
+  box-shadow: none;
+}
+
+.channel-detail-page__title-row {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 25px 1fr 25px;
+  align-items: center;
+}
+
+.channel-detail-page__title-spacer {
+  width: 25px;
+}
+
+.channel-detail-page__title-row h1 {
+  margin: 0;
+  overflow: hidden;
+  color: var(--text-primary);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.channel-detail-page__calendar {
+  display: grid;
+  width: 25px;
+  height: 27px;
+  justify-self: end;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.channel-detail-page__calendar img {
+  width: 25px;
+  height: 27px;
+}
+
+.channel-detail-page__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 12px;
+}

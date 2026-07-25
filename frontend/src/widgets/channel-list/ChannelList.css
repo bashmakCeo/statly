@@ -1,0 +1,120 @@
+/* ChannelList — список карточек каналов на главной и в выборе. */
+.channel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.channel-list__title {
+  margin: 0 0 4px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.channel-card {
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border: 0;
+  border-radius: 20px;
+  background: var(--background-soft);
+  text-align: left;
+  cursor: pointer;
+}
+
+.channel-card__content {
+  min-width: 0;
+}
+
+.channel-card__content h2 {
+  margin: 0 0 6px;
+  overflow: hidden;
+  color: var(--text-primary);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.channel-card__content p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.channel-card__content p span {
+  color: var(--primary-blue);
+}
+
+.channel-list__empty {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 18px 16px 28px;
+  text-align: center;
+}
+
+.channel-list__empty-animation {
+  width: 156px;
+  height: 156px;
+}
+
+.channel-list__empty p {
+  max-width: 260px;
+  margin: 12px 0 0;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* ChannelListSkeleton */
+.channel-list-skeleton__title {
+  width: 120px;
+  height: 18px;
+  margin-bottom: 4px;
+}
+
+.channel-list-skeleton__card {
+  display: flex;
+  min-height: 100px;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border-radius: 20px;
+  background: var(--background-soft);
+}
+
+.channel-list-skeleton__avatar {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+}
+
+.channel-list-skeleton__content {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.channel-list-skeleton__name {
+  width: 65%;
+  height: 18px;
+}
+
+.channel-list-skeleton__meta {
+  width: 40%;
+  height: 14px;
+}

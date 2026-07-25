@@ -1,0 +1,40 @@
+/* PageHeader — шапка страницы: строка навигации и заголовок. */
+.page-header {
+  padding: 24px 18px 22px;
+}
+
+.page-header__nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.page-header__nav-row .nav-button:last-child {
+  margin-left: auto;
+}
+
+.page-header__title-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-header__title-row .nav-button:first-child {
+  justify-self: start;
+}
+
+.page-header__title-row .nav-button:last-child {
+  justify-self: end;
+}
+
+.page-header__title {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
